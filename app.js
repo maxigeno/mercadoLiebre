@@ -4,7 +4,7 @@ const app = express();
 
 app.use("/static", express.static(__dirname + "/public"));
 
-app.listen(porcess.env.PORT || 3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("Server Corriendo");
 });
 
