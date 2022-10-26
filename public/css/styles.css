@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto";
+    font-size: 12px;
+    background-color: #ebebeb;
+  
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAC926;
+}
+
+ li{
+    list-style: none;
+}
+ a{
+    text-transform: none;
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+}
+
+.container-logo{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.logo{
+    width: 50%;
+}
+
+.search-container{
+    width: 50%;
+   
+}
+.input-search{
+    width: 70%;
+    border-radius: 5px;
+}
+
+.navbar{
+    display: none;
+}
+.title_header{
+    text-align: center;
+}
+
+.btn_menu-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btn_menu{
+    background-color: #1259c3;
+    padding: 10px;
+    border-radius: 5PX;
+    color:white;
+    text-align: center;
+}
+
+/* =========BANNER================= */
+.banner {
+    max-width: 100%;
+    max-height: 100%;
+   }
+
+.banner_container {
+    display: flex;
+    justify-content: center;
+ 
+  
+}
+/*======== MAIN ===========*/
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+   
+   
+}
+
+.title{
+    font-size: 24px;
+    color: rgba(0,0,0,0.6);
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.card{
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.card-container-img{
+    padding: 40px;
+
+}
+.card-img {
+    width: 100%;
+}
+
+.card-container-info{
+    /* le pongo relative para que el hijo se acomde respecto al padre */
+    position: relative;
+}
+
+.card-icon{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    color: #39b54a;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform  1s;
+}
+
+.card:hover .card-icon{
+   transform: rotate(-90deg);
+}
+.card:hover .card-name{
+    display: block;
+}
+.card:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.card-container-info{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+  
+}
+
+.card-price{
+    font-size: 18px;
+    display: inline-block; 
+  /*   margin-right: 20%; */
+   /*  width: 30%; */
+}
+.card-discount {
+    font-size: 16px;
+    color: #39b54a;
+    display: inline-block;
+ /*    width: 70%; */
+  
+}
+.card-name{
+    display: none;
+    font-size: 16px ;
+    margin-top: 10px;
+    color: #666;
+    transition: display  2s;
+}
+
+/*============ FOOTER ===================*/
+footer{
+    background-color: #fff;
+    padding-top: 20px;
+}
+.footer_article{
+    margin: 2em;
+    padding: 0 30px;
+}
+.footer_icon{
+    display: block;
+    font-size: 2em;
+    color: #1259c3;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer_title{
+   color: #666;
+    text-align: center;
+    margin: 0;
+}
+.footer_paragraph{
+    color:#666 ;
+   text-align: center;
+   margin: 0;
+}
+
+.footer_copyright{
+    padding-bottom:20px;
+}
+.footer_copyright p{
+    text-align: center;
+}
+
+
+ /* ===========MEDIAS QUERY=========== */
+/* tablet */
+ @media ( min-width: 361px) {
+    
+
+    /* header en linea */
+
+    header .header-container{
+        display: flex;
+       align-items: center;
+       margin-bottom: 20px;
+        
+    }
+    header .container-logo{
+        width: 60%;
+    }
+
+    header .logo {
+        width: 30%;
+    }
+
+     /* Cards de a dos */
+    .cards{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 45%;
+       /*  box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+    }
+
+   
+    /* Saco menu hamburguesa */
+    .btn_menu-container{
+        display: none;
+    }
+
+    /* hago visible navbar */
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+     
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-between;
+   
+    }
+    .navbar li a{
+        padding: 10px;
+    }
+  
+ }
+
+
+/* desktop */
+ @media ( min-width: 769px) {
+
+    .cards{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 20%;
+       /*  box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+    }
+
+    footer section{
+        display: flex;
+
+    }
+    
+ }
+
